@@ -1,5 +1,7 @@
 import 'package:equatable/equatable.dart';
 
+import '../../../shared/utils/utils.dart';
+
 class LocationEntity extends Equatable {
   final String id;
   final String name;
@@ -12,5 +14,16 @@ class LocationEntity extends Equatable {
   });
 
   @override
-  List<Object?> get props => [id];
+  List<Object?> get props => [
+    id,
+    name,
+    parentId,
+  ];
+
+  @override
+  String toString() => getValueOrEmpty(
+    props.reduce(
+      (a, b) => getValueOrEmpty(a) + getValueOrEmpty(b),
+    ),
+  );
 }

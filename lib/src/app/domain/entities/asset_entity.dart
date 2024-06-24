@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+import '../../../shared/utils/utils.dart';
 import '../enums/component_sensor_type.dart';
 import '../enums/component_status.dart';
 
@@ -27,5 +28,21 @@ class AssetEntity extends Equatable {
   });
 
   @override
-  List<Object?> get props => [id];
+  List<Object?> get props => [
+    id,
+    name,
+    parentId,
+    sensorId,
+    gatewayId,
+    locationId,
+    sensorType,
+    status,
+  ];
+
+  @override
+  String toString() => getValueOrEmpty(
+    props.reduce(
+      (a, b) => getValueOrEmpty(a) + getValueOrEmpty(b),
+    ),
+  );
 }

@@ -1,16 +1,21 @@
-# tractian_companies_assets
+# Tractian Challenge ([link](https://github.com/tractian/challenges/tree/main/mobile))
 
-A new Flutter project.
+<p align="center">
+    <img alt="App demo" src="assets/images/app_demo.gif" height="750"/>
+</p>
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- [x] Home page (companies list)
+- [x] Text search filter
+- [x] Energy sensors filter
+- [x] Critical sensor Status
+- [x] Tree assets view
 
-A few resources to get you started if this is your first Flutter project:
+## TODO
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [ ] Unit and widget tests
+- [ ] Improve the horizontal view of the tree
+- [ ] Show details modal of a clicked node
+- [ ] Run filter algorithm in a separate thread
+- [ ] Load nodes on demand (lazy loading) for a large dataset
